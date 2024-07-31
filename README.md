@@ -46,7 +46,7 @@
 
 ### OUTPUT
 
-![Assn 2 output SS](https://github.com/RudradevArya/Adv-WebTech-Lab-Assn/blob/main/2_navbar/info.png?raw=true)
+![Assn 2 output SS](https://github.com/RudradevArya/FSDL/blob/main/2_responsive_portfolio/output.png)
 
 
 
