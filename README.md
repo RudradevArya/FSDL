@@ -27,7 +27,7 @@
 
 ### OUTPUT
 
-![Assn 1 output SS](https://github.com/RudradevArya/FSDL/blob/main/1_responsive_restaurant/output.png?raw=true)
+![Assn 1 output SS](https://github.com/RudradevArya/FSDL/blob/main/1_responsive_restaurant/output.png)
 
 - - -
 
