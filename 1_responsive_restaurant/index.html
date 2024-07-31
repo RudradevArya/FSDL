@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudys Resto</title>
+    <style>
+        :root {
+            --color-primary: #ff6b6b;
+            --color-secondary: #4ecdc4;
+            --color-background: #f7f7f7;
+            --color-text: #333333;
+            --color-text-light: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--color-primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-text-light);
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .nav-toggle-label {
+            display: none;
+            cursor: pointer;
+        }
+
+        .nav-toggle-label span,
+        .nav-toggle-label span::before,
+        .nav-toggle-label span::after {
+            display: block;
+            background: var(--color-text-light);
+            height: 2px;
+            width: 2rem;
+            position: relative;
+        }
+
+        .nav-toggle-label span::before,
+        .nav-toggle-label span::after {
+            content: '';
+            position: absolute;
+        }
+
+        .nav-toggle-label span::before {
+            bottom: 7px;
+        }
+
+        .nav-toggle-label span::after {
+            top: 7px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--color-text-light);
+            font-weight: bold;
+            transition: color var(--transition-speed);
+        }
+
+        nav ul li a:hover {
+            color: var(--color-secondary);
+        }
+
+        .hero {
+            background-image: url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-text-light);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--color-primary);
+        }
+
+        .menu, .about {
+            padding: 4rem 0;
+        }
+
+        .menu-items {
+            display: grid;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform var(--transition-speed);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item-content {
+            padding: 1rem;
+        }
+
+        .menu-item h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .about p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-toggle-label {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--color-primary);
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0;
+                padding: 1rem;
+            }
+
+            .nav-toggle:checked ~ ul {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .menu-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .menu-items {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Rudys Resto</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Rudys Restaurant</h1>
+        </section>
+
+        <section id="menu" class="menu container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-items">
+                
+                <div class="menu-item">
+                    <img src="pic.jpg" alt="SPicy Samosa" style="width:100%; height:200px; object-fit:cover;">
+                    <div class="menu-item-content">
+                        <h3>Spicy Samosa</h3>
+                        <p>Fresh potato, spicy cutney</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="about" class="about container">
+            <h2 class="section-title">About Us</h2>
+            <p>Rudys Restaurant brings together the best of global cuisines in a modern, comfortable setting. Our chefs use locally-sourced ingredients to create unique and delicious dishes that will tantalize your taste buds.</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Contact us: info@rudyskitchen.com | <MIT, PUNE> | 8390</p>
+        </div>
+    </footer>
+</body>
+</html>
