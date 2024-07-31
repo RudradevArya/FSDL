@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudradevs' Portfolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    
+    .navbar-brand {
+      font-weight: bold;
+      color: #007bff !important;
+    }
+    
+    .container {
+      padding: 40px 15px;
+    }
+    
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+    }
+    
+    .card {
+      transition: transform 0.3s;
+      margin-bottom: 20px;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    #skills ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    #skills li {
+      background-color: #f8f9fa;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    #contact form {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    footer {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-nav {
+        flex-direction: column;
+      }
+      
+      .form-inline {
+        flex-flow: nowrap;
+      }
+      
+      .card-img-top {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Rudradevs' Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#bio">Bio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Results -->
+  <div class="container my-4" id="searchResults"></div>
+
+  <!-- Bio Section -->
+  <div class="container" id="bio">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="container" id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <!-- Add more skills here -->
+    </ul>
+  </div>
+
+  <!-- Projects Section -->
+  <div class="container" id="projects">
+    <h2>My Projects</h2>
+    <div class="row">
+      <!-- Project Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="lambda.jpg" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Lambda Mailer</h5>
+            <p class="card-text">Bulk mail sending application deployed on AWS beanstalk</p>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#project1Modal">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </div>
+
+  <!-- Project Modals -->
+  <div class="modal fade" id="project1Modal" tabindex="-1" role="dialog" aria-labelledby="project1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project1ModalLabel">Project 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Detailed project description goes here...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="container" id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>© 2023 Copyright: Rudradev</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript for Search Engine -->
+  <script>
+    $(document).ready(function() {
+      // Search functionality
+      $('#searchInput').on('keyup', function() {
+        var searchQuery = $(this).val();
+        performSearch(searchQuery);
+      });
+
+      function performSearch(query) {
+        // AJAX request to fetch search results from API
+        $.ajax({
+          url: 'https://api.example.com/search',
+          data: { query: query },
+          success: function(data) {
+            displaySearchResults(data);
+          },
+          error: function() {
+            console.log('Error fetching search results');
+          }
+        });
+      }
+
+      function displaySearchResults(results) {
+        // Clear previous search results
+        $('#searchResults').empty();
+
+        // Display search suggestions
+        var suggestions = results.suggestions;
+        if (suggestions.length > 0) {
+          $('#searchResults').append('<h4>Suggestions</h4>');
+          suggestions.forEach(function(suggestion) {
+            $('#searchResults').append('<div>' + suggestion + '</div>');
+          });
+        }
+
+        // Display search results
+        var items = results.items;
+        if (items.length > 0) {
+          $('#searchResults').append('<h4>Results</h4>');
+          items.forEach(function(item) {
+            $('#searchResults').append('<div>' + item.title + ' - ' + item.description + '</div>');
+          });
+        } else {
+          $('#searchResults').append('<div>No results found.</div>');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
