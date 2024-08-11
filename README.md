@@ -48,10 +48,27 @@
 
 ![Assn 2 output SS](https://github.com/RudradevArya/FSDL/blob/main/2_responsive_portfolio/output.png)
 
+- - -
+## Assn 3
 
+#### PS : Take a simple JavaScript project or exercises from the previous assignment and convert it into TypeScript, focusing on adding types and interfaces.
+
+### 🛣 Assn 3 TaskList
+
+> * [x] `create HTML skeleton`
+> * [ ] `add CSS`
+> * [x] 'add input, delete functionality'
+> * [x] `add types and interfaces to TS structure`
+> * [x] 'compile TS into JS'
+> * [x] `add pic`
 
 - - -
 
+### OUTPUT
+
+![Assn 3 output SS 1](https://github.com/RudradevArya/FSDL/blob/main/3_TS_ToDo/react.png)
+![Assn 3 output SS 2](https://github.com/RudradevArya/FSDL/blob/main/3_TS_ToDo/vanilla.png)
+- - -
 
 <br>
 <br>
