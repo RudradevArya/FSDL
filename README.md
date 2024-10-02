@@ -11,6 +11,7 @@
 * [📂 Assn 3](https://github.com/RudradevArya/FSDL#assn-3)
 * [📂 Assn 4](https://github.com/RudradevArya/FSDL#assn-4)
 * [📂 Assn 5](https://github.com/RudradevArya/FSDL#assn-5)
+* [📦 Assn 6](https://github.com/RudradevArya/FSDL#assn-6)
 
 
 - - -
@@ -109,6 +110,26 @@
 ![Assn 5 output SS POST ](https://github.com/RudradevArya/FSDL/blob/main/5_expressJS/post.png)
 ![Assn 5 output SS PUT](https://github.com/RudradevArya/FSDL/blob/main/5_expressJS/put.png)
 ![Assn 5 output SS DEL](https://github.com/RudradevArya/FSDL/blob/main/5_expressJS/del.png)
+
+- - -
+
+## Assn 6
+
+#### PS : Create a basic server with Node.js and Express.js that serves your personal website static files.
+
+### 🛣 Assn 6 TaskList
+
+> * [x] `Set up a basic Node.js environment`
+> * [x] `Create a simple Express.js server`
+> * [x] `Serve static files for a personal website`
+> * [x] `Implement basic routing for the homepage`
+> * [x] `Handle 404 errors for non-existent routes`
+- - -
+
+### OUTPUT
+
+![Assn 6 output SS 404](https://github.com/RudradevArya/FSDL/blob/main/6_static-file-server/404.png)
+![Assn 6 output SS home](https://github.com/RudradevArya/FSDL/blob/main/6_static-file-server/home.png)
 
 - - -
 <br>
